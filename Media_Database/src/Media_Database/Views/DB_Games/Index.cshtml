@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "Database Games";
+}
+
+<div class="row">
+
+    <div class="jumbotron">
+        <h2>Database Games</h2>
+        <p>View all available games which are in the collection.</p>
+        <p><a class="btn btn-primary btn-lg" role="button" data-toggle="modal" data-target="#upload">add New!</a></p>
+    </div>
+    
+    <table class="table">
+        <tr>
+            <td>ID</td>
+            <td>Titel</td>
+            <td>Owner</td>
+            <td>Location</td>
+        </tr>
+    </table>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="upload" tabindex="-1" role="dialog" aria-labelledby="myUploadLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myUploadLabel">insert database</h4>
+            </div>
+
+            
+
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="exampleInputFile">File input</label>
+                        <input type="file" name="file_Uploader" />
+                        <p class="help-block">please insert data </p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <input type="submit" id="btnUpload" value="Upload" class="btn btn-primary" />
+                </div>
+            
+        </div>
+    </div>
+</div>
+
+
+    
