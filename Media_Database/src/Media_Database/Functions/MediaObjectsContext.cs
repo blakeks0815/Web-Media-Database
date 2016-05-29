@@ -10,10 +10,10 @@ namespace Media_Database.Functions
 {
     public class MediaObjectsContext : DbContext {
 
-        public DbSet<MediaObject> MediaObjects { get; set; }
+        public DbSet<Games> MediaObjects { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder) {
-            builder.Entity<MediaObject>().HasKey(m => m.ID);
+            builder.Entity<Games>().HasKey(m => m.ID);
             base.OnModelCreating(builder);
         }
     }

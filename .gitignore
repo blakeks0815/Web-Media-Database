@@ -237,3 +237,4 @@ _Pvt_Extensions
 Media_Database/src/Media_Database/wwwroot/web.config
 Media_Database/src/Media_Database/wwwroot/lib/*
 Media_Database/src/Media_Database/media_datas.sqlite
+/Media_Database/src/Media_Database/Migrations

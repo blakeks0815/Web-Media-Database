@@ -18,6 +18,7 @@ namespace Media_Database
     {
 
         public IConfigurationRoot Configuration { get; set; }
+        private MediaObjectsContext context;
 
         public Startup(IHostingEnvironment env, IApplicationEnvironment appEnv) {
             var builder = new ConfigurationBuilder()
@@ -30,6 +31,7 @@ namespace Media_Database
         // For more information on how to configure your application, visit http://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvc();
 
             var connection = Configuration["Production:SqliteConnectionString"];
 
@@ -37,7 +39,12 @@ namespace Media_Database
                 .AddSqlite()
                 .AddDbContext<MediaObjectsContext>(options => options.UseSqlite(connection));
 
-            services.AddMvc();
+            //services.AddScoped<MediaObjectsContext>();
+
+            //create dbContext without dependency injection;
+            //context = new MediaObjectsContext();
+            //context.Database.EnsureCreated();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,4 +1,7 @@
-﻿@{
+﻿@using Media_Database.Models;
+@model IEnumerable<Games>
+
+@{
     ViewBag.Title = "Database Games";
 }
 
@@ -9,14 +12,31 @@
         <p>View all available games which are in the collection.</p>
         <p><a class="btn btn-primary btn-lg" role="button" data-toggle="modal" data-target="#upload">add New!</a></p>
     </div>
-    
+    <p>@ViewData["Title"] - Movie App</p>
+
+    <h2>Welcome</h2>
+
     <table class="table">
         <tr>
-            <td>ID</td>
-            <td>Titel</td>
-            <td>Owner</td>
-            <td>Location</td>
+            <th>@Html.DisplayNameFor(model => model.ID)</th>
+            <th>@Html.DisplayNameFor(model => model.Titel)</th>
+            <th>@Html.DisplayNameFor(model => model.Owner)</th>
+            <th>@Html.DisplayNameFor(model => model.Path)</th>
+            <th>Config</th>
         </tr>
+        @foreach(var item in Model) {
+
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.ID)</td>
+                <td>@Html.DisplayFor(modelItem => item.Titel)</td>
+                <td>@Html.DisplayFor(modelItem => item.Owner)</td>
+                <td>@Html.DisplayFor(modelItem => item.Path)</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                </td>
+            </tr>
+        }
     </table>
 </div>
 
