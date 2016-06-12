@@ -6,7 +6,7 @@
     <title>@ViewBag.Title</title>
     <link rel="stylesheet" type="text/css" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="~/lib/bootstrap/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" type="text/css" href="~/css/globalSite.css">
+    <link rel="stylesheet" type="text/css" href="~/css/globalStyle.css">
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -28,7 +28,7 @@
     <div class="container body-content">
         @RenderBody()
 
-        
+
     </div>
     <footer class="body-footer">
         <p>&copy; @DateTime.Now.Year - blakeks0815</p>
@@ -40,4 +40,3 @@
     @RenderSection("scripts", required: false)
 </body>
 </html>
-

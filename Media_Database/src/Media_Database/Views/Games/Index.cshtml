@@ -1,5 +1,5 @@
 ﻿@using Media_Database.Models;
-@model IEnumerable<Games>
+@model IEnumerable<Game>
 
 @{
     ViewBag.Title = "Database Games";
@@ -24,7 +24,7 @@
             <th>@Html.DisplayNameFor(model => model.Path)</th>
             <th>Config</th>
         </tr>
-        @foreach(var item in Model) {
+        @foreach (var item in Model) {
 
             <tr>
                 <td>@Html.DisplayFor(modelItem => item.ID)</td>
@@ -52,23 +52,23 @@
                 <h4 class="modal-title" id="myUploadLabel">insert database</h4>
             </div>
 
-            
 
-                <div class="modal-body">
-                    <div class="form-group">
-                        <label for="exampleInputFile">File input</label>
-                        <input type="file" name="file_Uploader" />
-                        <p class="help-block">please insert data </p>
-                    </div>
+
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="exampleInputFile">File input</label>
+                    <input type="file" name="file_Uploader" />
+                    <p class="help-block">please insert data </p>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <input type="submit" id="btnUpload" value="Upload" class="btn btn-primary" />
-                </div>
-            
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <input type="submit" id="btnUpload" value="Upload" class="btn btn-primary" />
+            </div>
+
         </div>
     </div>
 </div>
 
 
-    
+
