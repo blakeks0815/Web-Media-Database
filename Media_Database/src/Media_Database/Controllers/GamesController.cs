@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Media_Database.Models;
 
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
@@ -21,8 +22,9 @@ namespace Media_Database.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
-            var theList = dbContext.Games.ToList();
-            return View(theList);
+            GamesViewModel viewModel = new GamesViewModel();
+            viewModel.Games = dbContext.Games.ToList();
+            return View(viewModel);
         }
     }
 }

@@ -9,9 +9,9 @@
     "Microsoft.AspNetCore.Mvc": "1.0.0-rc2-final",
     "Microsoft.AspNetCore.Mvc.TagHelpers": "1.0.0-rc2-final",
     "Microsoft.AspNetCore.StaticFiles": "1.0.0-rc2-final",
-    "Microsoft.EntityFrameworkCore.Sqlite": "1.0.0-rc2-*",
+    "Microsoft.EntityFrameworkCore.Sqlite": "1.0.0-rc2-final",
     "Microsoft.EntityFrameworkCore.Tools": {
-      "version": "1.0.0-preview1-*",
+      "version": "1.0.0-preview1-final",
       "type": "build"
     }
   },
@@ -22,7 +22,7 @@
       "imports": "portable-net45+win8+dnxcore50"
     },
     "Microsoft.EntityFrameworkCore.Tools": {
-      "version": "1.0.0-preview1-*",
+      "version": "1.0.0-preview1-final",
       "imports": [
         "dnxcore50",
         "portable-net45+win8"

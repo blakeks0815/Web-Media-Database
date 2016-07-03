@@ -1,5 +1,5 @@
 ﻿@using Media_Database.Models;
-@model IEnumerable<Game>
+@model GamesViewModel
 
 @{
     ViewBag.Title = "Database Games";
@@ -18,13 +18,13 @@
 
     <table class="table">
         <tr>
-            <th>@Html.DisplayNameFor(model => model.ID)</th>
-            <th>@Html.DisplayNameFor(model => model.Titel)</th>
-            <th>@Html.DisplayNameFor(model => model.Owner)</th>
-            <th>@Html.DisplayNameFor(model => model.Path)</th>
+            <th>@Html.DisplayNameFor(model => model.NewGame.ID)</th>
+            <th>@Html.DisplayNameFor(model => model.NewGame.Titel)</th>
+            <th>@Html.DisplayNameFor(model => model.NewGame.Owner)</th>
+            <th>@Html.DisplayNameFor(model => model.NewGame.Path)</th>
             <th>Config</th>
         </tr>
-        @foreach (var item in Model) {
+        @foreach (var item in Model.Games) {
 
             <tr>
                 <td>@Html.DisplayFor(modelItem => item.ID)</td>
@@ -56,9 +56,8 @@
 
             <div class="modal-body">
                 <div class="form-group">
-                    <label for="exampleInputFile">File input</label>
-                    <input type="file" name="file_Uploader" />
-                    <p class="help-block">please insert data </p>
+                    <label for="exampleInputFile">Title</label>
+                    <input type="text" class=""
                 </div>
             </div>
             <div class="modal-footer">
